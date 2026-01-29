@@ -1,0 +1,27 @@
+{
+  "name": "feedback-analysis-agent",
+  "main": "src/index.ts",
+  "compatibility_date": "2025-03-07",
+  "compatibility_flags": ["nodejs_compat"],
+  "observability": {
+    "enabled": true,
+    "head_sampling_rate": 1
+  },
+  "ai": {
+    "binding": "AI"
+  },
+  "durable_objects": {
+    "bindings": [
+      {
+        "name": "FeedbackAgent",
+        "class_name": "FeedbackAnalysisAgent"
+      }
+    ]
+  },
+  "migrations": [
+    {
+      "tag": "v1",
+      "new_sqlite_classes": ["FeedbackAnalysisAgent"]
+    }
+  ]
+}
